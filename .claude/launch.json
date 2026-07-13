@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "toonix-dev",
+      "runtimeExecutable": "C:\\duy website\\scripts\\dev.bat",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}
