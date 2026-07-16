@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
-import { CoverPlaceholder } from "@/components/story/CoverPlaceholder";
+import { CoverArt } from "@/components/story/CoverArt";
 import { HeartIcon } from "@/components/icons";
 import { useFavorites } from "@/hooks/useFavorites";
 import { getGenreLabel } from "@/lib/stories";
@@ -19,10 +19,11 @@ export function StoryCard({ story }: { story: Story }) {
       className="group flex w-40 shrink-0 flex-col gap-2 sm:w-44"
     >
       <div className="relative">
-        <CoverPlaceholder
+        <CoverArt
           slug={story.slug}
           title={story.title}
-          className="aspect-[3/4] w-full text-2xl transition-transform group-hover:scale-[1.02]"
+          genres={story.genres}
+          className="aspect-[3/4] w-full transition-transform group-hover:scale-[1.02]"
         />
         {(story.isHot || story.isNew) && (
           <div className="absolute left-1.5 top-1.5">

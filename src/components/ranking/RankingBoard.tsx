@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CoverPlaceholder } from "@/components/story/CoverPlaceholder";
+import { CoverArt } from "@/components/story/CoverArt";
 import { StarRating } from "@/components/ui/StarRating";
 import { getGenreLabel, getRankedStories } from "@/lib/stories";
 import type { RankingSort } from "@/lib/stories";
@@ -52,10 +52,11 @@ export function RankingBoard() {
               >
                 {index + 1}
               </span>
-              <CoverPlaceholder
+              <CoverArt
                 slug={story.slug}
                 title={story.title}
-                className="h-16 w-12 shrink-0 text-xs"
+                genres={story.genres}
+                className="h-16 w-12 shrink-0"
               />
               <div className="min-w-0 flex-1">
                 <p className="line-clamp-1 text-sm font-semibold text-ink-50">

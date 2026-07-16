@@ -1,6 +1,7 @@
 import { stories } from "@/data/stories";
 import { chapters } from "@/data/chapters";
 import { genres } from "@/data/genres";
+import { seededRandom } from "@/lib/hash";
 import type { Chapter, Genre, Story } from "@/lib/types";
 
 export function getAllStories(): Story[] {
@@ -77,6 +78,29 @@ export function getRankedStories(sort: RankingSort, limit = 10): Story[] {
     return b.updatedAt.localeCompare(a.updatedAt);
   });
   return sorted.slice(0, limit);
+}
+
+export type TopPeriod = "day" | "week" | "month";
+
+const PERIOD_SHARE: Record<TopPeriod, [number, number]> = {
+  day: [0.01, 0.03],
+  week: [0.05, 0.1],
+  month: [0.15, 0.2],
+};
+
+export function getTopStories(
+  period: TopPeriod,
+  limit = 5
+): { story: Story; periodViews: number }[] {
+  const [base, spread] = PERIOD_SHARE[period];
+  return stories
+    .map((story) => {
+      const rng = seededRandom(`${story.slug}:${period}`);
+      const periodViews = Math.round(story.viewCount * (base + rng() * spread));
+      return { story, periodViews };
+    })
+    .sort((a, b) => b.periodViews - a.periodViews)
+    .slice(0, limit);
 }
 
 export function searchStories(query: string): Story[] {

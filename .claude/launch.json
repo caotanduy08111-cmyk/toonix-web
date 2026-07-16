@@ -6,6 +6,12 @@
       "runtimeExecutable": "C:\\duy website\\scripts\\dev.bat",
       "runtimeArgs": [],
       "port": 3000
+    },
+    {
+      "name": "nha-khoa-website",
+      "runtimeExecutable": "npx.cmd",
+      "runtimeArgs": ["--yes", "serve", "-l", "5500", "C:\\Users\\Duy\\Downloads\\Nha khoa\\website"],
+      "port": 5500
     }
   ]
 }

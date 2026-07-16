@@ -64,3 +64,8 @@ export interface CommunityStats {
   onlineCount: number;
   postsToday: number;
 }
+
+export interface AuthAccount {
+  name: string;
+  email: string;
+}

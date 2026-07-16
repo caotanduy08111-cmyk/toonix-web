@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useContinueReading } from "@/hooks/useContinueReading";
-import { CoverPlaceholder } from "@/components/story/CoverPlaceholder";
+import { CoverArt } from "@/components/story/CoverArt";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { getStoryBySlug } from "@/lib/stories";
 import type { ContinueReadingEntry, Story } from "@/lib/types";
@@ -41,10 +41,11 @@ export function ContinueReadingCard() {
                 href={`/truyen/${story.slug}/chuong/${entry.chapterNumber}`}
                 className="group flex gap-3"
               >
-                <CoverPlaceholder
+                <CoverArt
                   slug={story.slug}
                   title={story.title}
-                  className="h-16 w-12 shrink-0 text-xs"
+                  genres={story.genres}
+                  className="h-16 w-12 shrink-0"
                 />
                 <div className="min-w-0 flex-1">
                   <p className="line-clamp-1 text-sm font-medium text-ink-50 group-hover:text-gold-400">

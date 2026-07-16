@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
+import { CoverArt } from "@/components/story/CoverArt";
 
 const SLIDES = [
   {
@@ -12,6 +13,9 @@ const SLIDES = [
     ctaLabel: "ĐỌC NGAY",
     ctaHref: "/truyen/ve-than-bong-dem",
     hue: 220,
+    artSlug: "ve-than-bong-dem",
+    artTitle: "Vệ Thần Bóng Đêm",
+    artGenres: ["hanh-dong", "sieu-nhien"],
   },
   {
     id: "cap-nhat",
@@ -21,6 +25,9 @@ const SLIDES = [
     ctaLabel: "XEM CẬP NHẬT",
     ctaHref: "/danh-sach?sort=updated",
     hue: 40,
+    artSlug: "hero-cap-nhat",
+    artTitle: "Cập Nhật",
+    artGenres: ["the-thao"],
   },
   {
     id: "cong-dong",
@@ -30,6 +37,9 @@ const SLIDES = [
     ctaLabel: "KHÁM PHÁ",
     ctaHref: "/cong-dong",
     hue: 280,
+    artSlug: "hero-cong-dong",
+    artTitle: "Cộng Đồng",
+    artGenres: ["khoa-hoc-vien-tuong"],
   },
 ];
 
@@ -57,7 +67,19 @@ export function HeroCarousel() {
         } 65% 18%), transparent 50%), var(--color-navy-900)`,
       }}
     >
-      <div className="flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10">
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 w-3/5 opacity-20 sm:w-1/2"
+        aria-hidden="true"
+      >
+        <CoverArt
+          slug={slide.artSlug}
+          title={slide.artTitle}
+          genres={slide.artGenres}
+          className="h-[130%] w-full -translate-y-8 rotate-2"
+          rounded={false}
+        />
+      </div>
+      <div className="relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10">
         <span className="w-fit rounded bg-gold-500 px-2 py-1 text-xs font-bold tracking-wide text-navy-950">
           {slide.eyebrow}
         </span>

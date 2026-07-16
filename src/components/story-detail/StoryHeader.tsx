@@ -1,6 +1,6 @@
 "use client";
 
-import { CoverPlaceholder } from "@/components/story/CoverPlaceholder";
+import { CoverArt } from "@/components/story/CoverArt";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
 import { Button, ButtonLink } from "@/components/ui/Button";
@@ -21,10 +21,11 @@ export function StoryHeader({
 
   return (
     <section className="flex flex-col gap-5 sm:flex-row">
-      <CoverPlaceholder
+      <CoverArt
         slug={story.slug}
         title={story.title}
-        className="h-56 w-40 shrink-0 text-4xl sm:h-64 sm:w-44"
+        genres={story.genres}
+        className="h-56 w-40 shrink-0 sm:h-64 sm:w-44"
       />
       <div className="flex min-w-0 flex-1 flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2">

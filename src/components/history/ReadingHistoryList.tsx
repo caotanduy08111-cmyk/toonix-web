@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useReadingHistory } from "@/hooks/useReadingHistory";
-import { CoverPlaceholder } from "@/components/story/CoverPlaceholder";
+import { CoverArt } from "@/components/story/CoverArt";
 import { getStoryBySlug } from "@/lib/stories";
 import type { HistoryEntry, Story } from "@/lib/types";
 
@@ -40,10 +40,11 @@ export function ReadingHistoryList() {
                 href={`/truyen/${story.slug}/chuong/${entry.chapterNumber}`}
                 className="flex items-center gap-3 rounded-lg border border-navy-700 bg-navy-900 p-3 hover:border-gold-500"
               >
-                <CoverPlaceholder
+                <CoverArt
                   slug={story.slug}
                   title={story.title}
-                  className="h-14 w-11 shrink-0 text-xs"
+                  genres={story.genres}
+                  className="h-14 w-11 shrink-0"
                 />
                 <div className="min-w-0 flex-1">
                   <p className="line-clamp-1 text-sm font-medium text-ink-50">
