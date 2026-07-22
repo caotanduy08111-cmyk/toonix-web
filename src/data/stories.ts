@@ -234,4 +234,21 @@ export const stories: Story[] = [
     updatedAt: "2026-07-04",
     chapterCount: 5,
   },
+  {
+    id: "s16",
+    slug: "ta-mo-nong-trai-the-gioi-tu-tien",
+    title: "Ta Mở Nông Trại Thế Giới Tu Tiên",
+    synopsis:
+      "Xuyên không đến thế giới tu tiên nhưng không có tư chất luyện khí, Trần Phong quyết định chọn một con đường khác: dùng kiến thức nông nghiệp hiện đại để khai khẩn linh điền, trồng linh thảo và gây dựng cơ nghiệp từ hai bàn tay trắng.",
+    author: "Vân Thiên Cư Sĩ",
+    coverUrl: "/covers/ta-mo-nong-trai.jpg",
+    genres: ["fantasy", "phieu-luu"],
+    status: "ongoing",
+    rating: 4.7,
+    ratingCount: 96,
+    viewCount: 31_800,
+    isNew: true,
+    updatedAt: "2026-07-14",
+    chapterCount: 4,
+  },
 ];

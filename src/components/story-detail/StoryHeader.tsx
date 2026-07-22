@@ -25,6 +25,7 @@ export function StoryHeader({
         slug={story.slug}
         title={story.title}
         genres={story.genres}
+        coverUrl={story.coverUrl}
         className="h-56 w-40 shrink-0 sm:h-64 sm:w-44"
       />
       <div className="flex min-w-0 flex-1 flex-col gap-3">

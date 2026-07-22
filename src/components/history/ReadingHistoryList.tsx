@@ -44,6 +44,7 @@ export function ReadingHistoryList() {
                   slug={story.slug}
                   title={story.title}
                   genres={story.genres}
+                  coverUrl={story.coverUrl}
                   className="h-14 w-11 shrink-0"
                 />
                 <div className="min-w-0 flex-1">

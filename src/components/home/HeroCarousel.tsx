@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { CoverArt } from "@/components/story/CoverArt";
+import { ChevronDownIcon } from "@/components/icons";
 
 const SLIDES = [
   {
@@ -59,16 +60,19 @@ export function HeroCarousel() {
   const slide = SLIDES[index];
 
   return (
-    <section
-      className="relative overflow-hidden rounded-2xl border border-navy-700"
-      style={{
-        background: `radial-gradient(circle at 15% 20%, hsl(${slide.hue} 70% 22%), transparent 55%), radial-gradient(circle at 85% 80%, hsl(${
-          (slide.hue + 40) % 360
-        } 65% 18%), transparent 50%), var(--color-navy-900)`,
-      }}
-    >
+    <section className="relative overflow-hidden rounded-2xl border border-navy-700 bg-navy-900">
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 w-3/5 opacity-20 sm:w-1/2"
+        key={`${slide.id}-bg`}
+        className="animate-fade-in absolute inset-0"
+        style={{
+          background: `radial-gradient(circle at 15% 20%, hsl(${slide.hue} 70% 22%), transparent 55%), radial-gradient(circle at 85% 80%, hsl(${
+            (slide.hue + 40) % 360
+          } 65% 18%), transparent 50%), var(--color-navy-900)`,
+        }}
+      />
+      <div
+        key={`${slide.id}-art`}
+        className="animate-fade-in pointer-events-none absolute inset-y-0 right-0 w-3/5 opacity-20 sm:w-1/2"
         aria-hidden="true"
       >
         <CoverArt
@@ -79,7 +83,10 @@ export function HeroCarousel() {
           rounded={false}
         />
       </div>
-      <div className="relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10">
+      <div
+        key={slide.id}
+        className="animate-fade-up relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10"
+      >
         <span className="w-fit rounded bg-gold-500 px-2 py-1 text-xs font-bold tracking-wide text-navy-950">
           {slide.eyebrow}
         </span>
@@ -110,6 +117,7 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+      <ChevronDownIcon className="absolute bottom-4 right-4 hidden animate-bounce text-ink-300/70 sm:block" />
     </section>
   );
 }

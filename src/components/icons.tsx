@@ -148,3 +148,12 @@ export function UsersIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function CompassIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="m14.8 9.2-1.6 4.4-4.4 1.6 1.6-4.4z" />
+    </svg>
+  );
+}

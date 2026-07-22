@@ -5,6 +5,7 @@ export function CoverArt({
   slug,
   title,
   genres,
+  coverUrl,
   className = "",
   rounded = true,
   showLabel = true,
@@ -12,10 +13,22 @@ export function CoverArt({
   slug: string;
   title: string;
   genres: string[];
+  coverUrl?: string;
   className?: string;
   rounded?: boolean;
   showLabel?: boolean;
 }) {
+  if (coverUrl) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={coverUrl}
+        alt={title}
+        className={`object-cover ${rounded ? "rounded-md" : ""} ${className}`}
+      />
+    );
+  }
+
   const hue = hashStringToHue(slug);
   const hue2 = (hue + 34) % 360;
   const rng = seededRandom(slug);

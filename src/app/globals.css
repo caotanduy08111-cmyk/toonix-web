@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0f1c;
-  --foreground: #f2f4fb;
+  --background: #050a17;
+  --foreground: #eef4ff;
 }
 
 @theme inline {
@@ -15,23 +15,30 @@
   --font-display: "Segoe UI Semibold", "Segoe UI", ui-sans-serif, system-ui,
     -apple-system, "Helvetica Neue", Arial, sans-serif;
 
-  --color-navy-950: #0b0f1c;
-  --color-navy-900: #10162a;
-  --color-navy-800: #161d33;
-  --color-navy-700: #202a49;
-  --color-navy-600: #2c3865;
+  /* Dark neutrals, hue-matched to "Smalt" #042C8F from the brand palette */
+  --color-navy-950: #050a17;
+  --color-navy-900: #0a1224;
+  --color-navy-800: #121c38;
+  --color-navy-700: #1e2c50;
+  --color-navy-600: #2f3f68;
 
-  --color-gold-300: #f7dc7f;
-  --color-gold-400: #f4cd52;
-  --color-gold-500: #eab308;
-  --color-gold-600: #c8930a;
+  /* Primary accent: "Gargantua" / "Pear" from the brand palette */
+  --color-gold-300: #eef9a0;
+  --color-gold-400: #d3ea55;
+  --color-gold-500: #bbe11a;
+  --color-gold-600: #93b515;
 
-  --color-sky-400: #6b93f0;
-  --color-sky-500: #3b6fe0;
+  /* Secondary accent: "Celestial Blue" / "Havelock" from the brand palette */
+  --color-sky-400: #86d0fd;
+  --color-sky-500: #4891e7;
 
-  --color-ink-50: #f5f6fb;
-  --color-ink-300: #9aa3c0;
-  --color-ink-500: #6b7394;
+  /* Button brand accent: "Smalt" from the brand palette */
+  --color-smalt-500: #042c8f;
+  --color-smalt-600: #032670;
+
+  --color-ink-50: #eef4ff;
+  --color-ink-300: #93a4c9;
+  --color-ink-500: #5f7099;
 
   --color-success: #34c283;
   --color-danger: #e0554a;
@@ -41,4 +48,74 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

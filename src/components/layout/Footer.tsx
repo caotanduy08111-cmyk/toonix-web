@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/layout/Logo";
 
 const LINK_COLUMNS = [
   {
@@ -36,9 +37,7 @@ export function Footer() {
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 px-3 py-10 sm:px-4 lg:px-6">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           <div className="col-span-2 flex flex-col gap-3 sm:col-span-1">
-            <span className="font-display text-xl font-bold tracking-wider text-gold-400">
-              TOONIX
-            </span>
+            <Logo className="h-8" />
             <p className="text-sm text-ink-300">
               Nền tảng đọc truyện tranh trực tuyến — hàng ngàn bộ truyện thuộc
               nhiều thể loại, cập nhật mỗi ngày.

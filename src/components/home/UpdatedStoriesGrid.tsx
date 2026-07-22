@@ -19,9 +19,9 @@ export function UpdatedStoriesGrid({ stories }: { stories: Story[] }) {
         <span className="h-5 w-1 rounded-full bg-gold-500" />
         TRUYỆN MỚI CẬP NHẬT
       </h2>
-      <div className="flex flex-wrap gap-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">
         {pageStories.map((story) => (
-          <StoryCard key={story.id} story={story} />
+          <StoryCard key={story.id} story={story} className="w-full" />
         ))}
       </div>
       <Pagination

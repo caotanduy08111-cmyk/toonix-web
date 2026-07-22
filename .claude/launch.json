@@ -12,6 +12,12 @@
       "runtimeExecutable": "npx.cmd",
       "runtimeArgs": ["--yes", "serve", "-l", "5500", "C:\\Users\\Duy\\Downloads\\Nha khoa\\website"],
       "port": 5500
+    },
+    {
+      "name": "wolfroad-website",
+      "runtimeExecutable": "npx.cmd",
+      "runtimeArgs": ["--yes", "serve", "-l", "5501", "C:\\Users\\Duy\\Downloads\\khoi website\\wolfroad-website"],
+      "port": 5501
     }
   ]
 }

@@ -10,8 +10,8 @@ const PERKS = [
 
 export function PremiumUpsellCard() {
   return (
-    <section className="overflow-hidden rounded-xl border border-gold-500/30 bg-gradient-to-br from-navy-900 via-navy-900 to-navy-800 p-5">
-      <p className="font-display text-2xl font-bold tracking-wide text-gold-400">
+    <section className="rounded-xl border border-gold-500/30 bg-gradient-to-br from-navy-900 via-navy-900 to-navy-800 p-5">
+      <p className="font-display text-2xl leading-tight font-bold tracking-wide text-gold-400">
         TOONIX PREMIUM
       </p>
       <ul className="mt-3 flex flex-col gap-1.5 text-sm text-ink-300">

@@ -22,9 +22,9 @@ export function FavoritesList() {
           truyện để lưu lại.
         </p>
       ) : (
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">
           {stories.map((story) => (
-            <StoryCard key={story.id} story={story} />
+            <StoryCard key={story.id} story={story} className="w-full" />
           ))}
         </div>
       )}

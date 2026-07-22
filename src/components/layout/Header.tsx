@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
+import { Logo } from "@/components/layout/Logo";
 import { CoverArt } from "@/components/story/CoverArt";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useAuth } from "@/hooks/useAuth";
@@ -56,6 +57,7 @@ function SearchResults({
               slug={story.slug}
               title={story.title}
               genres={story.genres}
+              coverUrl={story.coverUrl}
               className="h-10 w-8 shrink-0"
             />
             <span className="line-clamp-1 text-sm text-ink-50">
@@ -76,6 +78,7 @@ export function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
   const [avatarOpen, setAvatarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const searchRef = useRef<HTMLDivElement>(null);
   const notifRef = useRef<HTMLDivElement>(null);
@@ -85,10 +88,25 @@ export function Header() {
   useClickOutside(notifRef, () => setNotifOpen(false));
   useClickOutside(avatarRef, () => setAvatarOpen(false));
 
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const results = searchStories(query).slice(0, 6);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-navy-700 bg-navy-950/95 backdrop-blur">
+    <header
+      className={`sticky top-0 z-40 border-b bg-navy-950/95 backdrop-blur transition-shadow duration-300 ${
+        scrolled
+          ? "border-navy-800 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)]"
+          : "border-navy-700 shadow-none"
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-3 px-3 sm:px-4 lg:px-6">
         <button
           type="button"
@@ -99,11 +117,7 @@ export function Header() {
           {mobileNavOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
 
-        <Link href="/" className="shrink-0">
-          <span className="font-display text-2xl font-bold tracking-wider text-gold-400">
-            TOONIX
-          </span>
-        </Link>
+        <Logo className="h-8" />
 
         <nav className="hidden items-center gap-1 text-sm font-medium text-ink-300 md:flex">
           {NAV_LINKS.map((link) => (
@@ -157,7 +171,10 @@ export function Header() {
             className="relative rounded-md p-2 text-ink-300 hover:bg-navy-800 hover:text-ink-50"
           >
             <BellIcon />
-            <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-danger" />
+            <span className="absolute right-1.5 top-1.5 flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-danger opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-danger" />
+            </span>
           </button>
           {notifOpen && (
             <div className="absolute right-0 top-full mt-2 w-72 overflow-hidden rounded-lg border border-navy-700 bg-navy-900 shadow-xl">

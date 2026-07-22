@@ -98,9 +98,9 @@ export function StoryListControls({ stories }: { stories: Story[] }) {
           Không có truyện phù hợp với bộ lọc hiện tại.
         </p>
       ) : (
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">
           {filtered.map((story) => (
-            <StoryCard key={story.id} story={story} />
+            <StoryCard key={story.id} story={story} className="w-full" />
           ))}
         </div>
       )}
