@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
 
 const VARIANT_CLASSES = {
-  primary: "bg-smalt-500 text-white hover:bg-smalt-600",
+  primary: "bg-gold-500 text-navy-950 hover:bg-gold-400",
   secondary: "bg-navy-800 text-ink-50 border border-navy-600 hover:bg-navy-700",
   ghost: "text-ink-300 hover:text-ink-50 hover:bg-navy-800",
 } as const;

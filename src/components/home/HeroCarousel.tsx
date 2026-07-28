@@ -9,6 +9,7 @@ const SLIDES = [
   {
     id: "kham-pha",
     eyebrow: "HOT",
+    eyebrowClass: "bg-gold-500 text-navy-950",
     title: "KHÁM PHÁ THẾ GIỚI TRUYỆN TRANH KHÔNG GIỚI HẠN",
     subtitle: "Hàng ngàn bộ truyện hấp dẫn đang chờ bạn khám phá",
     ctaLabel: "ĐỌC NGAY",
@@ -21,6 +22,7 @@ const SLIDES = [
   {
     id: "cap-nhat",
     eyebrow: "MỚI",
+    eyebrowClass: "bg-sky-500 text-ink-50",
     title: "CẬP NHẬT MỖI NGÀY, KHÔNG BỎ LỠ CHƯƠNG MỚI",
     subtitle: "Theo dõi các bộ truyện đang ra chương liên tục mỗi tuần",
     ctaLabel: "XEM CẬP NHẬT",
@@ -33,6 +35,7 @@ const SLIDES = [
   {
     id: "cong-dong",
     eyebrow: "CỘNG ĐỒNG",
+    eyebrowClass: "bg-gold-500 text-navy-950",
     title: "THAM GIA CỘNG ĐỒNG HƠN 128.000 ĐỘC GIẢ",
     subtitle: "Bình luận, đánh giá và thảo luận về bộ truyện bạn yêu thích",
     ctaLabel: "KHÁM PHÁ",
@@ -87,7 +90,9 @@ export function HeroCarousel() {
         key={slide.id}
         className="animate-fade-up relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10"
       >
-        <span className="w-fit rounded bg-gold-500 px-2 py-1 text-xs font-bold tracking-wide text-navy-950">
+        <span
+          className={`w-fit rounded px-2 py-1 text-xs font-bold tracking-wide ${slide.eyebrowClass}`}
+        >
           {slide.eyebrow}
         </span>
         <h1 className="max-w-xl text-balance font-display text-3xl font-bold leading-[1.05] tracking-wide text-ink-50 sm:text-5xl">
