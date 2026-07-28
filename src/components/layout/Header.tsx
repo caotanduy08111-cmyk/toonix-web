@@ -107,7 +107,7 @@ export function Header() {
           : "border-navy-700 shadow-none"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-3 px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto flex h-16 max-w-[1680px] items-center gap-3 px-3 sm:px-4 lg:px-6">
         <button
           type="button"
           onClick={() => setMobileNavOpen((v) => !v)}

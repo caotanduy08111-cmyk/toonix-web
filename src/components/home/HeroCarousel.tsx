@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
-import { CoverArt } from "@/components/story/CoverArt";
 import { ChevronDownIcon } from "@/components/icons";
 
 const SLIDES = [
@@ -13,37 +12,28 @@ const SLIDES = [
     title: "KHÁM PHÁ THẾ GIỚI TRUYỆN TRANH KHÔNG GIỚI HẠN",
     subtitle: "Hàng ngàn bộ truyện hấp dẫn đang chờ bạn khám phá",
     ctaLabel: "ĐỌC NGAY",
-    ctaHref: "/truyen/ve-than-bong-dem",
-    hue: 220,
-    artSlug: "ve-than-bong-dem",
-    artTitle: "Vệ Thần Bóng Đêm",
-    artGenres: ["hanh-dong", "sieu-nhien"],
+    ctaHref: "/danh-sach",
+    bannerUrl: "/banner/vi-than-2.png",
   },
   {
-    id: "cap-nhat",
+    id: "dem-khong-bong",
     eyebrow: "MỚI",
     eyebrowClass: "bg-sky-500 text-ink-50",
-    title: "CẬP NHẬT MỖI NGÀY, KHÔNG BỎ LỠ CHƯƠNG MỚI",
-    subtitle: "Theo dõi các bộ truyện đang ra chương liên tục mỗi tuần",
-    ctaLabel: "XEM CẬP NHẬT",
-    ctaHref: "/danh-sach?sort=updated",
-    hue: 40,
-    artSlug: "hero-cap-nhat",
-    artTitle: "Cập Nhật",
-    artGenres: ["the-thao"],
+    title: "ĐÊM KHÔNG BÓNG",
+    subtitle: "Hai huynh đệ kiếm khách mang huyết mạch bị nguyền — bóng tối phải dè chừng chính họ.",
+    ctaLabel: "ĐỌC NGAY",
+    ctaHref: "/truyen/dem-khong-bong",
+    bannerUrl: "/banner/dem-khong-bong-wide.png",
   },
   {
-    id: "cong-dong",
-    eyebrow: "CỘNG ĐỒNG",
+    id: "cuoc-chien-cac-vi-than",
+    eyebrow: "HOT",
     eyebrowClass: "bg-cyan-500 text-white",
-    title: "THAM GIA CỘNG ĐỒNG HƠN 128.000 ĐỘC GIẢ",
-    subtitle: "Bình luận, đánh giá và thảo luận về bộ truyện bạn yêu thích",
-    ctaLabel: "KHÁM PHÁ",
-    ctaHref: "/cong-dong",
-    hue: 280,
-    artSlug: "hero-cong-dong",
-    artTitle: "Cộng Đồng",
-    artGenres: ["khoa-hoc-vien-tuong"],
+    title: "CUỘC CHIẾN CÁC VỊ THẦN",
+    subtitle: "Khi các vị thần cổ đại thức tỉnh, một chiến binh nửa thần phải chọn phe định đoạt số phận nhân gian.",
+    ctaLabel: "ĐỌC NGAY",
+    ctaHref: "/truyen/cuoc-chien-cac-vi-than",
+    bannerUrl: "/banner/vi-than-1.png",
   },
 ];
 
@@ -67,28 +57,25 @@ export function HeroCarousel() {
       <div
         key={`${slide.id}-bg`}
         className="animate-fade-in absolute inset-0"
-        style={{
-          background: `radial-gradient(circle at 15% 20%, hsl(${slide.hue} 70% 22%), transparent 55%), radial-gradient(circle at 85% 80%, hsl(${
-            (slide.hue + 40) % 360
-          } 65% 18%), transparent 50%), var(--color-navy-900)`,
-        }}
-      />
-      <div
-        key={`${slide.id}-art`}
-        className="animate-fade-in pointer-events-none absolute inset-y-0 right-0 w-3/5 opacity-20 sm:w-1/2"
         aria-hidden="true"
       >
-        <CoverArt
-          slug={slide.artSlug}
-          title={slide.artTitle}
-          genres={slide.artGenres}
-          className="h-[130%] w-full -translate-y-8 rotate-2"
-          rounded={false}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={slide.bannerUrl}
+          alt=""
+          className="h-full w-full object-cover object-[75%_center]"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, var(--color-navy-900) 0%, rgba(10,18,36,0.82) 30%, rgba(10,18,36,0.35) 55%, rgba(10,18,36,0.1) 75%, transparent 100%)",
+          }}
         />
       </div>
       <div
         key={slide.id}
-        className="animate-fade-up relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[320px] sm:px-10"
+        className="animate-fade-up relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[380px] sm:px-10"
       >
         <span
           className={`w-fit rounded px-2 py-1 text-xs font-bold tracking-wide ${slide.eyebrowClass}`}

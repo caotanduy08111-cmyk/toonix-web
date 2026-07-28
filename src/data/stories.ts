@@ -8,6 +8,7 @@ export const stories: Story[] = [
     synopsis:
       "Sau khi cả tông môn bị thảm sát trong một đêm, Lý Vân Phong tỉnh dậy với huyết mạch Long tộc thức tỉnh trong cơ thể. Từ một kẻ phế vật bị coi thường, cậu bước lên con đường báo thù xuyên qua chín đại lục.",
     author: "Tàng Vân Các",
+    coverUrl: "/covers/huyet-long-chien-ky.png",
     genres: ["hanh-dong", "fantasy"],
     status: "ongoing",
     rating: 4.8,
@@ -75,6 +76,7 @@ export const stories: Story[] = [
     synopsis:
       "Hai chị em song sinh bị chia cắt từ nhỏ tình cờ trao đổi thân phận trong một kỳ thi chuyển cấp. Bí mật gia đình mà cả hai không hề hay biết dần lộ ra từng lớp một.",
     author: "Diệp Thanh",
+    coverUrl: "/covers/mat-ma-song-sinh.png",
     genres: ["hoc-duong", "tinh-cam"],
     status: "ongoing",
     rating: 4.4,
@@ -108,6 +110,7 @@ export const stories: Story[] = [
     synopsis:
       "Cuối thời loạn lạc, một kiếm khách vô danh lang bạt khắp các trấn nhỏ, ghi lại câu chuyện của những con người bị thời cuộc bỏ quên bằng chính lưỡi kiếm của mình.",
     author: "Lâm Phong",
+    coverUrl: "/covers/bien-nien-su-kiem-khach.png",
     genres: ["hanh-dong", "lich-su"],
     status: "completed",
     rating: 4.6,
@@ -123,6 +126,7 @@ export const stories: Story[] = [
     synopsis:
       "Mỗi cuốn sách trong thư viện cổ dưới tầng hầm trường đại học đều chứa một lời nguyền đang chờ được đọc lên. Một nhóm sinh viên trực đêm đã vô tình mở trang sách đầu tiên.",
     author: "Uyên Bóng Tối",
+    coverUrl: "/covers/thu-vien-bi-nguyen.png",
     genres: ["kinh-di", "fantasy"],
     status: "ongoing",
     rating: 4.3,
@@ -138,6 +142,7 @@ export const stories: Story[] = [
     synopsis:
       "Bị loại khỏi đội tuyển điền kinh vì chấn thương, Huy tưởng sự nghiệp thể thao của mình đã chấm dứt — cho đến khi huấn luyện viên già mời cậu thử sức với bộ môn ba môn phối hợp.",
     author: "Đình Khang",
+    coverUrl: "/covers/duong-den-vo-cuc.png",
     genres: ["the-thao", "hoc-duong"],
     status: "ongoing",
     rating: 4.5,
@@ -153,6 +158,7 @@ export const stories: Story[] = [
     synopsis:
       "Trạm nghiên cứu liên hành tinh mất liên lạc đúng lúc một sao chổi lạ tiến vào quỹ đạo. Nhật ký cuối cùng của phi hành đoàn hé lộ điều gì đó không thuộc về hệ mặt trời này.",
     author: "Vũ Trụ Ký",
+    coverUrl: "/covers/nhat-ky-cua-sao-choi.png",
     genres: ["khoa-hoc-vien-tuong", "phieu-luu"],
     status: "ongoing",
     rating: 4.4,
@@ -185,6 +191,7 @@ export const stories: Story[] = [
     synopsis:
       "Ba năm sau khi rời thị trấn nhỏ, Nam trở về để bán căn nhà cũ và tình cờ gặp lại Chi — người bạn thời thơ ấu mà cậu chưa từng nói lời tạm biệt đúng nghĩa.",
     author: "Hoài Phong",
+    coverUrl: "/covers/mua-roi-cuoi-ha.png",
     genres: ["tinh-cam", "hoc-duong"],
     status: "completed",
     rating: 4.7,
@@ -200,6 +207,7 @@ export const stories: Story[] = [
     synopsis:
       "Công chúa út của vương quốc đã sụp đổ giả trang thành lính đánh thuê để sống sót. Nhưng khi mảnh vương miện gãy trong tay cô bắt đầu phát sáng, quá khứ không cho phép cô trốn tránh mãi.",
     author: "Nguyệt Bạch",
+    coverUrl: "/covers/vuong-mien-gay.png",
     genres: ["fantasy", "tinh-cam"],
     status: "ongoing",
     rating: 4.6,
@@ -232,6 +240,7 @@ export const stories: Story[] = [
     synopsis:
       "Trên một hòn đảo không xuất hiện trên bất kỳ bản đồ nào, thời gian trôi nhanh gấp mười lần đất liền. Bốn người bị mắc kẹt phải tìm đường về trước khi tuổi trẻ của họ cạn kiệt.",
     author: "Băng Nguyên",
+    coverUrl: "/covers/dao-giau-thoi-gian.png",
     genres: ["phieu-luu", "khoa-hoc-vien-tuong"],
     status: "ongoing",
     rating: 4.3,
@@ -364,6 +373,7 @@ export const stories: Story[] = [
     synopsis:
       "Một mảnh gương vỡ dưới ánh trăng cho Diệu Anh khả năng nhìn thấy đúng một ngày trong tương lai của bất kỳ ai cô chạm vào — kể cả ngày cuối cùng của chính người cô yêu thương nhất.",
     author: "Thanh Trúc",
+    coverUrl: "/covers/anh-trang-vo.png",
     genres: ["tinh-cam", "sieu-nhien"],
     status: "ongoing",
     rating: 4.5,
@@ -379,6 +389,7 @@ export const stories: Story[] = [
     synopsis:
       "Thành phố về đêm là lãnh địa của lũ quái vật ẩn mình trong bóng tối. Lữ đoàn thợ săn nhỏ bé của Long là những kẻ duy nhất dám bước vào ngõ hẻm mà cảnh sát không bao giờ tuần tra.",
     author: "Sói Xám",
+    coverUrl: "/covers/lu-doan-tho-san-bong-toi.png",
     genres: ["hanh-dong", "kinh-di"],
     status: "ongoing",
     rating: 4.6,
@@ -394,6 +405,7 @@ export const stories: Story[] = [
     synopsis:
       "Vị tướng quân từng khiến vạn quân khiếp sợ tái sinh vào thân xác một tân binh yếu ớt nhất doanh trại. Không ai ngờ kẻ bị bắt nạt mỗi ngày lại mang linh hồn của một chiến thần huyền thoại.",
     author: "Thiết Y",
+    coverUrl: "/covers/chien-than-tai-lam.png",
     genres: ["hanh-dong", "fantasy"],
     status: "ongoing",
     rating: 4.7,
@@ -410,6 +422,7 @@ export const stories: Story[] = [
     synopsis:
       "Mỗi đêm ngủ say, Vy lại lạc vào một quán trọ nằm ngoài thời gian, nơi những vị khách kỳ lạ trả tiền trọ bằng ký ức. Nhưng có một căn phòng cô không bao giờ được phép mở.",
     author: "Diễm My",
+    coverUrl: "/covers/quan-tro-giua-chiem-bao.png",
     genres: ["sieu-nhien", "fantasy"],
     status: "ongoing",
     rating: 4.4,
@@ -426,6 +439,7 @@ export const stories: Story[] = [
     synopsis:
       "Không kỹ năng, không kinh nghiệm, chỉ có lòng nhiệt huyết — Khoa bất đắc dĩ trở thành đội trưởng đội bóng rổ sắp giải thể của trường. Hành trình giữ đội tồn tại khó hơn cậu tưởng rất nhiều.",
     author: "Gia Bảo",
+    coverUrl: "/covers/doi-truong-khong-chuyen.png",
     genres: ["the-thao", "hoc-duong"],
     status: "ongoing",
     rating: 4.5,
@@ -441,6 +455,7 @@ export const stories: Story[] = [
     synopsis:
       "Con tàu thăm dò cuối cùng của nhân loại phát hiện một hành tinh không có trên bất kỳ bản đồ thiên văn nào. Phi hành đoàn phải quyết định: quay về báo cáo, hay ở lại tìm hiểu điều bất thường đang gọi tên họ.",
     author: "Hải Đăng",
+    coverUrl: "/covers/hanh-tinh-thu-chin.png",
     genres: ["khoa-hoc-vien-tuong", "phieu-luu"],
     status: "ongoing",
     rating: 4.4,
@@ -456,6 +471,7 @@ export const stories: Story[] = [
     synopsis:
       "Trong thời loạn lạc cuối triều đại, một sử quan trẻ tuổi phát hiện mình có thể nghe được lời kể của vong hồn những người đã khuất — và họ đều kể một sự thật khác với chính sử.",
     author: "Nguyệt Hàn",
+    coverUrl: "/covers/bien-su-vong-linh.png",
     genres: ["lich-su", "kinh-di"],
     status: "completed",
     rating: 4.6,
@@ -471,6 +487,7 @@ export const stories: Story[] = [
     synopsis:
       "Quán cà phê nhỏ ở góc phố là nơi duy nhất Bình còn cảm thấy bình yên sau cú sốc gia đình. Cho đến khi cô chủ quán vui tính bắt đầu kéo cậu vào những rắc rối dở khóc dở cười của khu phố.",
     author: "Tuệ Lâm",
+    coverUrl: "/covers/nu-cuoi-sau-con-mua.png",
     genres: ["hai-huoc", "tinh-cam"],
     status: "ongoing",
     rating: 4.5,

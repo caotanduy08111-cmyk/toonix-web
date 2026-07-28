@@ -1,6 +1,6 @@
 export function StarRating({ rating }: { rating: number }) {
   return (
-    <span className="inline-flex items-center gap-1 text-xs font-mono text-cyan-400 tabular-nums">
+    <span className="inline-flex items-center gap-1 text-xs font-mono text-[#f8c93a] tabular-nums">
       <svg
         viewBox="0 0 20 20"
         width="12"
