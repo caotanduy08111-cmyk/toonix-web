@@ -16,7 +16,7 @@ export function FeaturedStoriesRow({ stories }: { stories: Story[] }) {
     <section>
       <div className="mb-3 flex items-center justify-between">
         <h2 className="flex items-center gap-2 font-display text-xl font-bold tracking-wide text-ink-50">
-          <span className="h-4 w-1 rounded-full bg-gold-500" />
+          <span className="h-4 w-1 rounded-full bg-cyan-500" />
           TRUYỆN ĐỀ CỬ
         </h2>
         <div className="flex gap-1.5">

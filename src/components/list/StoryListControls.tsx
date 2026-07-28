@@ -84,7 +84,7 @@ export function StoryListControls({ stories }: { stories: Story[] }) {
             onClick={() => setNewOnly((v) => !v)}
             className={`rounded-lg border px-3 py-2 text-sm font-medium ${
               newOnly
-                ? "border-gold-500 bg-gold-500/10 text-gold-400"
+                ? "border-cyan-500 bg-cyan-500/10 text-cyan-400"
                 : "border-navy-700 text-ink-300 hover:text-ink-50"
             }`}
           >

@@ -37,7 +37,7 @@ export function Sidebar() {
               href={href}
               className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium ${
                 active
-                  ? "bg-gold-500/10 text-gold-400"
+                  ? "bg-cyan-500/10 text-cyan-400"
                   : "text-ink-300 hover:bg-navy-800 hover:text-ink-50"
               }`}
             >

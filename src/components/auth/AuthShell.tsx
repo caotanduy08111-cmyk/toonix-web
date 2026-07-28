@@ -59,7 +59,7 @@ export function AuthShell({
             >
               {displayed}
               {!done && (
-                <span className="ml-[2px] inline-block h-[1em] w-[2px] animate-blink translate-y-[3px] bg-gold-400 align-middle" />
+                <span className="ml-[2px] inline-block h-[1em] w-[2px] animate-blink translate-y-[3px] bg-cyan-400 align-middle" />
               )}
             </motion.h1>
             <motion.p

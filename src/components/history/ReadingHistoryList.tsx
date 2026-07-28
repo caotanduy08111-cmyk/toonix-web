@@ -38,7 +38,7 @@ export function ReadingHistoryList() {
             <li key={`${entry.storySlug}-${entry.chapterNumber}`}>
               <Link
                 href={`/truyen/${story.slug}/chuong/${entry.chapterNumber}`}
-                className="flex items-center gap-3 rounded-lg border border-navy-700 bg-navy-900 p-3 hover:border-gold-500"
+                className="flex items-center gap-3 rounded-lg border border-navy-700 bg-navy-900 p-3 hover:border-cyan-500"
               >
                 <CoverArt
                   slug={story.slug}

@@ -16,7 +16,7 @@ export function UpdatedStoriesGrid({ stories }: { stories: Story[] }) {
   return (
     <section className="flex flex-col gap-4">
       <h2 className="flex items-center gap-2 font-display text-xl font-bold tracking-wide text-ink-50">
-        <span className="h-5 w-1 rounded-full bg-gold-500" />
+        <span className="h-5 w-1 rounded-full bg-cyan-500" />
         TRUYỆN MỚI CẬP NHẬT
       </h2>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">

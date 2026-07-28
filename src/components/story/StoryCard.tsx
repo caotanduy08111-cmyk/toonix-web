@@ -46,13 +46,13 @@ export function StoryCard({
             e.preventDefault();
             toggleFavorite(story.slug);
           }}
-          className="absolute right-1.5 top-1.5 rounded-full bg-navy-950/70 p-1.5 text-ink-50 backdrop-blur hover:text-gold-400"
+          className="absolute right-1.5 top-1.5 rounded-full bg-navy-950/70 p-1.5 text-ink-50 backdrop-blur hover:text-cyan-400"
         >
           <HeartIcon filled={favorite} className="h-3.5 w-3.5" />
         </button>
       </div>
       <div>
-        <h3 className="line-clamp-1 text-sm font-semibold text-ink-50 group-hover:text-gold-400">
+        <h3 className="line-clamp-1 text-sm font-semibold text-ink-50 group-hover:text-cyan-400">
           {story.title}
         </h3>
         <div className="mt-0.5 flex items-center justify-between gap-2 text-xs text-ink-300">

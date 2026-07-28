@@ -20,7 +20,7 @@ export default function GenreIndexPage() {
               <Link
                 key={genre.slug}
                 href={`/the-loai/${genre.slug}`}
-                className="rounded-xl border border-navy-700 bg-navy-900 p-4 hover:border-gold-500"
+                className="rounded-xl border border-navy-700 bg-navy-900 p-4 hover:border-cyan-500"
               >
                 <p className="font-display text-lg font-bold text-ink-50">
                   {genre.name}

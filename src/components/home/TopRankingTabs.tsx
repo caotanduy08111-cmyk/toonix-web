@@ -20,7 +20,7 @@ export function TopRankingTabs() {
     <section className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="flex items-center gap-2 font-display text-xl font-bold tracking-wide text-ink-50">
-          <span className="h-5 w-1 rounded-full bg-gold-500" />
+          <span className="h-5 w-1 rounded-full bg-cyan-500" />
           BẢNG XẾP HẠNG
         </h2>
         <div className="flex gap-1.5">
@@ -31,7 +31,7 @@ export function TopRankingTabs() {
               onClick={() => setPeriod(tab.key)}
               className={`rounded-lg px-3 py-1.5 text-sm font-semibold ${
                 period === tab.key
-                  ? "bg-gold-500 text-navy-950"
+                  ? "bg-cyan-500 text-white"
                   : "border border-navy-700 text-ink-300 hover:text-ink-50"
               }`}
             >
@@ -46,11 +46,11 @@ export function TopRankingTabs() {
           <li key={story.id}>
             <Link
               href={`/truyen/${story.slug}`}
-              className="flex items-center gap-3 rounded-lg border border-navy-700 bg-navy-900 p-2.5 hover:border-gold-500"
+              className="flex items-center gap-3 rounded-lg border border-navy-700 bg-navy-900 p-2.5 hover:border-cyan-500"
             >
               <span
                 className={`w-6 shrink-0 text-center font-display text-lg font-bold ${
-                  index < 3 ? "text-gold-400" : "text-ink-500"
+                  index < 3 ? "text-cyan-400" : "text-ink-500"
                 }`}
               >
                 {index + 1}

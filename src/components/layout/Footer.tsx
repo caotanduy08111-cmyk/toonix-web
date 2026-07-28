@@ -49,12 +49,12 @@ export function Footer() {
               <br />
               <a
                 href="mailto:lienhe@toonix.vn"
-                className="hover:text-gold-400"
+                className="hover:text-cyan-400"
               >
                 lienhe@toonix.vn
               </a>
               <br />
-              <a href="tel:+842838001234" className="hover:text-gold-400">
+              <a href="tel:+842838001234" className="hover:text-cyan-400">
                 (028) 3800 1234
               </a>
             </address>
@@ -67,7 +67,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-ink-300 hover:text-gold-400"
+                  className="text-sm text-ink-300 hover:text-cyan-400"
                 >
                   {link.label}
                 </Link>

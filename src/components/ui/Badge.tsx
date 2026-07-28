@@ -1,5 +1,5 @@
 const VARIANT_CLASSES = {
-  hot: "bg-gold-500 text-navy-950",
+  hot: "bg-cyan-500 text-white",
   new: "bg-sky-500 text-ink-50",
   neutral: "bg-navy-700 text-ink-300",
 } as const;

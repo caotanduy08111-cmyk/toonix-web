@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const EYE_LEFT_X = 36;
-const EYE_RIGHT_X = 64;
-const EYE_Y = 52;
-const MAX_PUPIL_OFFSET = 4.2;
+const EYE_LEFT_X = 32;
+const EYE_RIGHT_X = 68;
+const EYE_Y = 50;
+const MAX_PUPIL_OFFSET = 6;
 
 export function Mascot({ className = "mx-auto mb-3 h-20 w-20" }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,42 +33,47 @@ export function Mascot({ className = "mx-auto mb-3 h-20 w-20" }: { className?: s
 
   return (
     <div ref={ref} className={`select-none ${className}`} aria-hidden="true">
-      <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-lg">
-        <ellipse cx="50" cy="90" rx="26" ry="5" fill="#000" opacity="0.18" />
-        <circle cx="50" cy="52" r="38" fill="#FFD43B" />
-        <circle cx="50" cy="52" r="38" fill="url(#mascot-shade)" />
-        <ellipse cx="22" cy="63" rx="8" ry="5.5" fill="#FF8FA8" opacity="0.75" />
-        <ellipse cx="78" cy="63" rx="8" ry="5.5" fill="#FF8FA8" opacity="0.75" />
+      <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-[0_0_12px_rgba(56,189,248,0.45)]">
+        <ellipse cx="50" cy="90" rx="30" ry="5" fill="#000" opacity="0.18" />
 
-        <ellipse cx={EYE_LEFT_X} cy={EYE_Y} rx="10.5" ry="12.5" fill="#fff" />
-        <ellipse cx={EYE_RIGHT_X} cy={EYE_Y} rx="10.5" ry="12.5" fill="#fff" />
+        {/* the two "O" letters from the TOONIX logo, used as a face */}
+        <circle
+          cx={EYE_LEFT_X}
+          cy={EYE_Y}
+          r="15.5"
+          fill="none"
+          stroke="#fff"
+          strokeWidth="7"
+        />
+        <circle
+          cx={EYE_RIGHT_X}
+          cy={EYE_Y}
+          r="15.5"
+          fill="none"
+          stroke="#fff"
+          strokeWidth="7"
+        />
+
         <circle
           cx={EYE_LEFT_X + pupil.x}
           cy={EYE_Y + pupil.y}
-          r="4.6"
-          fill="var(--color-navy-950)"
+          r="6"
+          fill="var(--color-sky-500)"
         />
         <circle
           cx={EYE_RIGHT_X + pupil.x}
           cy={EYE_Y + pupil.y}
-          r="4.6"
-          fill="var(--color-navy-950)"
+          r="6"
+          fill="var(--color-sky-500)"
         />
 
         <path
-          d="M40 72 Q50 80 60 72"
-          stroke="var(--color-navy-950)"
-          strokeWidth="3"
+          d="M38 78 Q50 86 62 78"
+          stroke="#fff"
+          strokeWidth="4"
           strokeLinecap="round"
           fill="none"
         />
-
-        <defs>
-          <radialGradient id="mascot-shade" cx="35%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#fff" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#fff" stopOpacity="0" />
-          </radialGradient>
-        </defs>
       </svg>
     </div>
   );

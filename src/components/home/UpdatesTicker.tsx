@@ -14,9 +14,9 @@ export function UpdatesTicker() {
           <Link
             key={`${story.id}-${i}`}
             href={`/truyen/${story.slug}`}
-            className="flex shrink-0 items-center gap-2 text-xs text-ink-300 hover:text-gold-400"
+            className="flex shrink-0 items-center gap-2 text-xs text-ink-300 hover:text-cyan-400"
           >
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" />
             {story.title}
             <span className="text-ink-500">— chương mới</span>
           </Link>

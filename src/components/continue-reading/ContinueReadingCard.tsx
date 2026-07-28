@@ -19,7 +19,7 @@ export function ContinueReadingCard() {
     <section className="rounded-xl border border-navy-700 bg-navy-900 p-4">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="flex items-center gap-2 text-sm font-bold tracking-wide text-ink-50">
-          <span className="h-3.5 w-1 rounded-full bg-gold-500" />
+          <span className="h-3.5 w-1 rounded-full bg-cyan-500" />
           TIẾP TỤC ĐỌC
         </h2>
         <Link
@@ -49,7 +49,7 @@ export function ContinueReadingCard() {
                   className="h-16 w-12 shrink-0"
                 />
                 <div className="min-w-0 flex-1">
-                  <p className="line-clamp-1 text-sm font-medium text-ink-50 group-hover:text-gold-400">
+                  <p className="line-clamp-1 text-sm font-medium text-ink-50 group-hover:text-cyan-400">
                     {story.title}
                   </p>
                   <p className="mt-0.5 font-mono text-xs tabular-nums text-ink-300">

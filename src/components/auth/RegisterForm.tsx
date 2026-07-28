@@ -95,7 +95,7 @@ export function RegisterForm() {
             type="checkbox"
             checked={agreed}
             onChange={(e) => setAgreed(e.target.checked)}
-            className="mt-0.5 h-4 w-4 shrink-0 rounded border-navy-600 bg-navy-800 accent-gold-500"
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-navy-600 bg-navy-800 accent-cyan-500"
           />
           Tôi đồng ý với{" "}
           <a href="#" className="font-medium text-sky-400 hover:text-sky-300">

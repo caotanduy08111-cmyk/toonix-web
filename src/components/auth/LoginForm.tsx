@@ -72,7 +72,7 @@ export function LoginForm() {
             type="checkbox"
             checked={remember}
             onChange={(e) => setRemember(e.target.checked)}
-            className="h-4 w-4 rounded border-navy-600 bg-navy-800 accent-gold-500"
+            className="h-4 w-4 rounded border-navy-600 bg-navy-800 accent-cyan-500"
           />
           Ghi nhớ đăng nhập
         </label>

@@ -32,6 +32,12 @@
   --color-sky-400: #86d0fd;
   --color-sky-500: #4891e7;
 
+  /* Button accent: bright cyan pill buttons */
+  --color-cyan-300: #a5eaf7;
+  --color-cyan-400: #4dd8f0;
+  --color-cyan-500: #22c8ea;
+  --color-cyan-600: #12a9c9;
+
   /* Button brand accent: "Smalt" from the brand palette */
   --color-smalt-500: #042c8f;
   --color-smalt-600: #032670;

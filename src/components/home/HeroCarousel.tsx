@@ -9,7 +9,7 @@ const SLIDES = [
   {
     id: "kham-pha",
     eyebrow: "HOT",
-    eyebrowClass: "bg-gold-500 text-navy-950",
+    eyebrowClass: "bg-cyan-500 text-white",
     title: "KHÁM PHÁ THẾ GIỚI TRUYỆN TRANH KHÔNG GIỚI HẠN",
     subtitle: "Hàng ngàn bộ truyện hấp dẫn đang chờ bạn khám phá",
     ctaLabel: "ĐỌC NGAY",
@@ -35,7 +35,7 @@ const SLIDES = [
   {
     id: "cong-dong",
     eyebrow: "CỘNG ĐỒNG",
-    eyebrowClass: "bg-gold-500 text-navy-950",
+    eyebrowClass: "bg-cyan-500 text-white",
     title: "THAM GIA CỘNG ĐỒNG HƠN 128.000 ĐỘC GIẢ",
     subtitle: "Bình luận, đánh giá và thảo luận về bộ truyện bạn yêu thích",
     ctaLabel: "KHÁM PHÁ",
@@ -117,7 +117,7 @@ export function HeroCarousel() {
             aria-label={`Chuyển đến slide ${i + 1}`}
             onClick={() => setIndex(i)}
             className={`h-1.5 rounded-full transition-all ${
-              i === index ? "w-6 bg-gold-500" : "w-1.5 bg-navy-600"
+              i === index ? "w-6 bg-cyan-500" : "w-1.5 bg-navy-600"
             }`}
           />
         ))}

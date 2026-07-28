@@ -60,7 +60,7 @@ export function Pagination({
             aria-current={p === page ? "page" : undefined}
             className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold tabular-nums ${
               p === page
-                ? "bg-gold-500 text-navy-950"
+                ? "bg-cyan-500 text-white"
                 : "border border-navy-700 text-ink-300 hover:text-ink-50"
             }`}
           >

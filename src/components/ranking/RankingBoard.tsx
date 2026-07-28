@@ -30,7 +30,7 @@ export function RankingBoard() {
             onClick={() => setSort(tab.key)}
             className={`rounded-lg px-4 py-2 text-sm font-semibold ${
               sort === tab.key
-                ? "bg-gold-500 text-navy-950"
+                ? "bg-cyan-500 text-white"
                 : "border border-navy-700 text-ink-300 hover:text-ink-50"
             }`}
           >
@@ -43,11 +43,11 @@ export function RankingBoard() {
           <li key={story.id}>
             <Link
               href={`/truyen/${story.slug}`}
-              className="flex items-center gap-4 rounded-lg border border-navy-700 bg-navy-900 p-3 hover:border-gold-500"
+              className="flex items-center gap-4 rounded-lg border border-navy-700 bg-navy-900 p-3 hover:border-cyan-500"
             >
               <span
                 className={`w-7 shrink-0 text-center font-display text-xl font-bold ${
-                  index < 3 ? "text-gold-400" : "text-ink-500"
+                  index < 3 ? "text-cyan-400" : "text-ink-500"
                 }`}
               >
                 {index + 1}
