@@ -40,7 +40,7 @@ export function ChapterList({
               >
                 <span>
                   Chương {chapter.number}
-                  {chapter.title ? ` — ${chapter.title}` : ""}
+                  {chapter.title ? `: ${chapter.title}` : ""}
                 </span>
                 <span className="font-mono text-xs tabular-nums text-ink-500">
                   {chapter.publishedAt}

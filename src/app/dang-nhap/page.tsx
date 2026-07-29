@@ -8,7 +8,7 @@ export default function LoginPage() {
   return (
     <AuthShell
       title="Đăng nhập"
-      subtitle="Chào mừng trở lại — tiếp tục hành trình đọc truyện của bạn."
+      subtitle="Chào mừng trở lại, tiếp tục hành trình đọc truyện của bạn."
       footer={
         <>
           Chưa có tài khoản?{" "}

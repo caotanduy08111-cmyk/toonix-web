@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CoverArt } from "@/components/story/CoverArt";
 import { Logo } from "@/components/layout/Logo";
 import { Mascot } from "@/components/auth/Mascot";
 import { useTypewriter } from "@/hooks/useTypewriter";
@@ -20,17 +19,24 @@ export function AuthShell({
   const { displayed, done } = useTypewriter(title);
 
   return (
-    <div className="flex min-h-screen bg-navy-950">
+    <div className="relative flex min-h-screen bg-navy-950">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/auth-background.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 hidden h-full w-full object-cover opacity-30 lg:block"
+      />
+      <div className="absolute inset-0 hidden bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-950/40 lg:block" />
+
       <div className="relative hidden w-[42%] shrink-0 overflow-hidden lg:block">
-        <CoverArt
-          slug="toonix-hanh-trinh"
-          title="Toonix"
-          genres={["fantasy", "sieu-nhien"]}
-          className="h-full w-full"
-          rounded={false}
-          showLabel={false}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/auth-background.png"
+          alt=""
+          className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col justify-between bg-navy-950/35 p-10">
+        <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-navy-950 via-navy-950/20 to-navy-950/50 p-10">
           <Logo className="h-9" />
           <div>
             <p className="max-w-sm text-balance font-display text-3xl font-bold leading-tight text-ink-50">
@@ -44,7 +50,7 @@ export function AuthShell({
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col">
+      <div className="relative flex flex-1 flex-col">
         <header className="flex h-16 shrink-0 items-center px-4 sm:px-6 lg:hidden">
           <Logo className="h-7" />
         </header>

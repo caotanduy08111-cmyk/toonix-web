@@ -40,7 +40,7 @@ export const stories: Story[] = [
     slug: "khoi-nguyen-vuc-tham",
     title: "Khởi Nguyên Vực Thẳm",
     synopsis:
-      "Một hố đen bí ẩn xuất hiện giữa lòng thành phố, nuốt chửng mọi quy luật vật lý. Nhóm thám hiểm trẻ tuổi của An Nhiên là những người đầu tiên bước vào — và phát hiện vực thẳm ấy đang sống.",
+      "Một hố đen bí ẩn xuất hiện giữa lòng thành phố, nuốt chửng mọi quy luật vật lý. Nhóm thám hiểm trẻ tuổi của An Nhiên là những người đầu tiên bước vào, và phát hiện vực thẳm ấy đang sống.",
     author: "Mộc Tà",
     coverUrl: "/covers/khoi-nguyen-vuc-tham.png",
     genres: ["phieu-luu", "fantasy"],
@@ -140,7 +140,7 @@ export const stories: Story[] = [
     slug: "duong-den-vo-cuc",
     title: "Đường Đến Vô Cực",
     synopsis:
-      "Bị loại khỏi đội tuyển điền kinh vì chấn thương, Huy tưởng sự nghiệp thể thao của mình đã chấm dứt — cho đến khi huấn luyện viên già mời cậu thử sức với bộ môn ba môn phối hợp.",
+      "Bị loại khỏi đội tuyển điền kinh vì chấn thương, Huy tưởng sự nghiệp thể thao của mình đã chấm dứt, cho đến khi huấn luyện viên già mời cậu thử sức với bộ môn ba môn phối hợp.",
     author: "Đình Khang",
     coverUrl: "/covers/duong-den-vo-cuc.png",
     genres: ["the-thao", "hoc-duong"],
@@ -189,7 +189,7 @@ export const stories: Story[] = [
     slug: "mua-roi-cuoi-ha",
     title: "Mưa Rơi Cuối Hạ",
     synopsis:
-      "Ba năm sau khi rời thị trấn nhỏ, Nam trở về để bán căn nhà cũ và tình cờ gặp lại Chi — người bạn thời thơ ấu mà cậu chưa từng nói lời tạm biệt đúng nghĩa.",
+      "Ba năm sau khi rời thị trấn nhỏ, Nam trở về để bán căn nhà cũ và tình cờ gặp lại Chi, người bạn thời thơ ấu mà cậu chưa từng nói lời tạm biệt đúng nghĩa.",
     author: "Hoài Phong",
     coverUrl: "/covers/mua-roi-cuoi-ha.png",
     genres: ["tinh-cam", "hoc-duong"],
@@ -221,7 +221,7 @@ export const stories: Story[] = [
     slug: "ke-san-quai-vat-vo-danh",
     title: "Kẻ Săn Quái Vật Vô Danh",
     synopsis:
-      "Không huy hiệu, không danh tiếng, gã thợ săn quái vật hạng chót chỉ nhận những nhiệm vụ mà không ai dám nhận — cho đến ngày con quái vật cấp thảm họa xuất hiện ngay giữa thủ đô.",
+      "Không huy hiệu, không danh tiếng, gã thợ săn quái vật hạng chót chỉ nhận những nhiệm vụ mà không ai dám nhận, cho đến ngày con quái vật cấp thảm họa xuất hiện ngay giữa thủ đô.",
     author: "Kỳ Lân Đen",
     coverUrl: "/covers/ke-san-quai-vat-vo-danh.png",
     genres: ["hanh-dong", "fantasy"],
@@ -271,7 +271,7 @@ export const stories: Story[] = [
     slug: "dem-khong-bong",
     title: "Đêm Không Bóng",
     synopsis:
-      "Hai huynh đệ kiếm khách mang trong mình dòng máu bị nguyền rủa, lang bạt dưới ánh trăng để tìm ra kẻ đã xóa sổ gia tộc họ. Bóng tối không nuốt chửng họ — họ chính là thứ bóng tối phải dè chừng.",
+      "Hai huynh đệ kiếm khách mang trong mình dòng máu bị nguyền rủa, lang bạt dưới ánh trăng để tìm ra kẻ đã xóa sổ gia tộc họ. Bóng tối không nuốt chửng họ, họ chính là thứ bóng tối phải dè chừng.",
     author: "Băng Việt",
     coverUrl: "/covers/dem-khong-bong.jpg",
     genres: ["fantasy", "hanh-dong"],
@@ -288,7 +288,7 @@ export const stories: Story[] = [
     slug: "hay-hanh-dong-nhu-mot-boss-di",
     title: "Hãy Hành Động Như Một Boss Đi",
     synopsis:
-      "Bị ép nhập vai phản diện cuối cùng trong một trò chơi sinh tồn không lối thoát, Đạt nhận ra cách duy nhất để sống sót là đóng tròn vai boss — mạnh mẽ, lạnh lùng và không bao giờ để lộ sơ hở.",
+      "Bị ép nhập vai phản diện cuối cùng trong một trò chơi sinh tồn không lối thoát, Đạt nhận ra cách duy nhất để sống sót là đóng tròn vai boss, mạnh mẽ, lạnh lùng và không bao giờ để lộ sơ hở.",
     author: "Vực Đen",
     coverUrl: "/covers/hay-hanh-dong-nhu-mot-boss-di.jpg",
     genres: ["hanh-dong", "fantasy"],
@@ -337,7 +337,7 @@ export const stories: Story[] = [
     slug: "hoc-vien-toi-thuong",
     title: "Học Viện Tối Thượng",
     synopsis:
-      "Ngôi trường đào tạo hiệp sĩ danh giá nhất vương quốc chỉ nhận học viên mang huyết mạch quý tộc — cho đến khi một thanh niên vô danh với thanh kiếm gãy bước vào và phá vỡ mọi luật lệ.",
+      "Ngôi trường đào tạo hiệp sĩ danh giá nhất vương quốc chỉ nhận học viên mang huyết mạch quý tộc, cho đến khi một thanh niên vô danh với thanh kiếm gãy bước vào và phá vỡ mọi luật lệ.",
     author: "Lam Kỳ",
     coverUrl: "/covers/hoc-vien-toi-thuong.jpg",
     genres: ["fantasy", "hoc-duong"],
@@ -354,7 +354,7 @@ export const stories: Story[] = [
     slug: "hoa-than-thanh-meo",
     title: "Hoá Thân Thành Mèo",
     synopsis:
-      "Một tai nạn thí nghiệm khiến Khôi có thể hoá thân thành con mèo cam tinh quái của mình bất cứ lúc nào — và nhận ra thân phận mèo lại là vũ khí bí mật để phá án cùng người anh trai bí ẩn.",
+      "Một tai nạn thí nghiệm khiến Khôi có thể hoá thân thành con mèo cam tinh quái của mình bất cứ lúc nào, và nhận ra thân phận mèo lại là vũ khí bí mật để phá án cùng người anh trai bí ẩn.",
     author: "Miu Trắng",
     coverUrl: "/covers/hoa-than-thanh-meo.jpg",
     genres: ["hai-huoc", "sieu-nhien"],
@@ -371,7 +371,7 @@ export const stories: Story[] = [
     slug: "anh-trang-vo",
     title: "Ánh Trăng Vỡ",
     synopsis:
-      "Một mảnh gương vỡ dưới ánh trăng cho Diệu Anh khả năng nhìn thấy đúng một ngày trong tương lai của bất kỳ ai cô chạm vào — kể cả ngày cuối cùng của chính người cô yêu thương nhất.",
+      "Một mảnh gương vỡ dưới ánh trăng cho Diệu Anh khả năng nhìn thấy đúng một ngày trong tương lai của bất kỳ ai cô chạm vào, kể cả ngày cuối cùng của chính người cô yêu thương nhất.",
     author: "Thanh Trúc",
     coverUrl: "/covers/anh-trang-vo.png",
     genres: ["tinh-cam", "sieu-nhien"],
@@ -437,7 +437,7 @@ export const stories: Story[] = [
     slug: "doi-truong-khong-chuyen",
     title: "Đội Trưởng Không Chuyên",
     synopsis:
-      "Không kỹ năng, không kinh nghiệm, chỉ có lòng nhiệt huyết — Khoa bất đắc dĩ trở thành đội trưởng đội bóng rổ sắp giải thể của trường. Hành trình giữ đội tồn tại khó hơn cậu tưởng rất nhiều.",
+      "Không kỹ năng, không kinh nghiệm, chỉ có lòng nhiệt huyết, Khoa bất đắc dĩ trở thành đội trưởng đội bóng rổ sắp giải thể của trường. Hành trình giữ đội tồn tại khó hơn cậu tưởng rất nhiều.",
     author: "Gia Bảo",
     coverUrl: "/covers/doi-truong-khong-chuyen.png",
     genres: ["the-thao", "hoc-duong"],
@@ -469,7 +469,7 @@ export const stories: Story[] = [
     slug: "bien-su-vong-linh",
     title: "Biên Sử Vong Linh",
     synopsis:
-      "Trong thời loạn lạc cuối triều đại, một sử quan trẻ tuổi phát hiện mình có thể nghe được lời kể của vong hồn những người đã khuất — và họ đều kể một sự thật khác với chính sử.",
+      "Trong thời loạn lạc cuối triều đại, một sử quan trẻ tuổi phát hiện mình có thể nghe được lời kể của vong hồn những người đã khuất, và họ đều kể một sự thật khác với chính sử.",
     author: "Nguyệt Hàn",
     coverUrl: "/covers/bien-su-vong-linh.png",
     genres: ["lich-su", "kinh-di"],

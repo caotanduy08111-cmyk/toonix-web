@@ -20,7 +20,7 @@ const SLIDES = [
     eyebrow: "MỚI",
     eyebrowClass: "bg-sky-500 text-ink-50",
     title: "ĐÊM KHÔNG BÓNG",
-    subtitle: "Hai huynh đệ kiếm khách mang huyết mạch bị nguyền — bóng tối phải dè chừng chính họ.",
+    subtitle: "Hai huynh đệ kiếm khách mang huyết mạch bị nguyền, bóng tối phải dè chừng chính họ.",
     ctaLabel: "ĐỌC NGAY",
     ctaHref: "/truyen/dem-khong-bong",
     bannerUrl: "/banner/dem-khong-bong-wide.png",

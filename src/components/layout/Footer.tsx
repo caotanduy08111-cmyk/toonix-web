@@ -39,13 +39,13 @@ export function Footer() {
           <div className="col-span-2 flex flex-col gap-3 sm:col-span-1">
             <Logo className="h-8" />
             <p className="text-sm text-ink-300">
-              Nền tảng đọc truyện tranh trực tuyến — hàng ngàn bộ truyện thuộc
+              Nền tảng đọc truyện tranh trực tuyến, hàng ngàn bộ truyện thuộc
               nhiều thể loại, cập nhật mỗi ngày.
             </p>
             <address className="not-italic text-sm text-ink-300">
               Công ty TNHH Toonix Media
               <br />
-              72 Đường Nguyễn Trãi, Quận 1, TP. Hồ Chí Minh
+              613 Âu Cơ, Tân Phú, TP. Hồ Chí Minh
               <br />
               <a
                 href="mailto:lienhe@toonix.vn"
@@ -78,7 +78,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-2 border-t border-navy-800 pt-6 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Toonix Media. Bảo lưu mọi quyền.</p>
-          <p>Toonix là sản phẩm demo — nội dung và dữ liệu chỉ mang tính minh hoạ.</p>
+          <p>Toonix là sản phẩm demo, nội dung và dữ liệu chỉ mang tính minh hoạ.</p>
         </div>
       </div>
     </footer>

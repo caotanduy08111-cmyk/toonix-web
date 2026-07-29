@@ -18,7 +18,7 @@ export function UpdatesTicker() {
           >
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" />
             {story.title}
-            <span className="text-ink-500">— chương mới</span>
+            <span className="text-ink-500">chương mới</span>
           </Link>
         ))}
       </div>
