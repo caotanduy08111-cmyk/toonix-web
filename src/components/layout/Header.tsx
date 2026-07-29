@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
@@ -70,7 +71,13 @@ function SearchResults({
   );
 }
 
+function isNavLinkActive(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
+  const pathname = usePathname();
   const { user, logout } = useAuth();
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -120,15 +127,23 @@ export function Header() {
         <Logo className="h-8" />
 
         <nav className="hidden items-center gap-1 text-sm font-medium text-ink-300 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-md px-3 py-2 hover:bg-navy-800 hover:text-ink-50"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isNavLinkActive(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`rounded-md px-3 py-2 transition-colors ${
+                  active
+                    ? "bg-navy-800 text-cyan-400"
+                    : "hover:bg-navy-800 hover:text-ink-50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div ref={searchRef} className="relative ml-auto hidden max-w-xs flex-1 sm:block">
@@ -278,16 +293,24 @@ export function Header() {
 
       {mobileNavOpen && (
         <nav className="flex flex-col gap-0.5 border-t border-navy-800 px-3 py-3 md:hidden">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileNavOpen(false)}
-              className="rounded-md px-3 py-2.5 text-sm font-medium text-ink-300 hover:bg-navy-800 hover:text-ink-50"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isNavLinkActive(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileNavOpen(false)}
+                aria-current={active ? "page" : undefined}
+                className={`rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-navy-800 text-cyan-400"
+                    : "text-ink-300 hover:bg-navy-800 hover:text-ink-50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       )}
 
