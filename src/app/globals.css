@@ -57,10 +57,10 @@ body {
   background-color: #020817;
   background-image: radial-gradient(
       ellipse 70% 55% at 50% 42%,
-      rgba(43, 92, 200, 0.4),
-      rgba(43, 92, 200, 0) 70%
+      rgba(64, 130, 255, 0.55),
+      rgba(64, 130, 255, 0) 70%
     ),
-    linear-gradient(rgba(2, 8, 23, 0.55), rgba(2, 8, 23, 0.75)),
+    linear-gradient(rgba(2, 8, 23, 0.42), rgba(2, 8, 23, 0.62)),
     url("/images/toonix-fantasy-background.png");
   background-size:
     100% 100%,
