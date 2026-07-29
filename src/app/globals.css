@@ -51,9 +51,33 @@
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background-color: #020817;
+  background-image: radial-gradient(
+      ellipse 70% 55% at 50% 42%,
+      rgba(43, 92, 200, 0.4),
+      rgba(43, 92, 200, 0) 70%
+    ),
+    linear-gradient(rgba(2, 8, 23, 0.55), rgba(2, 8, 23, 0.75)),
+    url("/images/toonix-fantasy-background.png");
+  background-size:
+    100% 100%,
+    100% 100%,
+    106%;
+  background-position: center;
+  background-attachment: fixed;
+  animation: toonixBackground 18s ease-in-out infinite alternate;
+}
+
+@keyframes toonixBackground {
+  from {
+    background-position: 48% 48%;
+  }
+  to {
+    background-position: 52% 52%;
+  }
 }
 
 @keyframes fade-up {
