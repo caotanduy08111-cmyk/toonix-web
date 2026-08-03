@@ -5,6 +5,7 @@ export interface Story {
   synopsis: string;
   author: string;
   coverUrl?: string;
+  bannerUrl?: string;
   genres: string[];
   status: "ongoing" | "completed";
   rating: number;

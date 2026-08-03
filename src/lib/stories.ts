@@ -25,6 +25,12 @@ export function getStoriesByGenre(genreSlug: string): Story[] {
   return stories.filter((story) => story.genres.includes(genreSlug));
 }
 
+export function getGenreBannerStory(genreSlug: string): Story | undefined {
+  return stories.find(
+    (story) => story.genres.includes(genreSlug) && story.bannerUrl
+  );
+}
+
 export function getAllGenres(): Genre[] {
   return genres;
 }
