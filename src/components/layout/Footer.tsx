@@ -34,7 +34,7 @@ const LINK_COLUMNS = [
 export function Footer() {
   return (
     <footer className="border-t border-navy-800 bg-navy-950">
-      <div className="mx-auto flex w-full max-w-[1680px] flex-col gap-8 px-3 py-10 sm:px-4 lg:px-6">
+      <div className="mx-auto flex w-full max-w-[1680px] flex-col gap-8 px-3 py-10 sm:px-4 lg:px-6 xl:px-10">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           <div className="col-span-2 flex flex-col gap-3 sm:col-span-1">
             <Logo className="h-8" />

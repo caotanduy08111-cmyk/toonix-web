@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ButtonLink } from "@/components/ui/Button";
 import { hashStringToHue } from "@/lib/hash";
 import type { Story } from "@/lib/types";
 
@@ -27,7 +28,7 @@ export function GenreBanner({
   const active = hasBanners ? banners[index] : undefined;
 
   return (
-    <section className="relative min-h-[220px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:min-h-[320px]">
+    <section className="relative min-h-[280px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:min-h-[380px]">
       {active?.bannerUrl ? (
         <div key={active.id} className="animate-fade-in absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -54,6 +55,16 @@ export function GenreBanner({
             } 65% 18%), transparent 50%), var(--color-navy-900)`,
           }}
         />
+      )}
+
+      {active && (
+        <ButtonLink
+          href={`/truyen/${active.slug}`}
+          variant="primary"
+          className="absolute bottom-4 right-4 px-5 py-2.5 text-sm"
+        >
+          ĐỌC NGAY →
+        </ButtonLink>
       )}
 
       {banners.length > 1 && (
