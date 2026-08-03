@@ -27,7 +27,7 @@ export function GenreBanner({
   const active = hasBanners ? banners[index] : undefined;
 
   return (
-    <section className="relative h-40 overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:h-56">
+    <section className="relative min-h-[220px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:min-h-[320px]">
       {active?.bannerUrl ? (
         <div key={active.id} className="animate-fade-in absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -41,7 +41,7 @@ export function GenreBanner({
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, rgba(10,18,36,0.15) 0%, rgba(10,18,36,0) 40%, rgba(10,18,36,0.5) 100%)",
+                "linear-gradient(180deg, rgba(10,18,36,0.1) 0%, rgba(10,18,36,0) 40%, rgba(10,18,36,0.5) 100%)",
             }}
           />
         </div>
