@@ -15,7 +15,7 @@ export function AppShell({
     <div className="flex min-h-screen flex-col">
       <Header />
       <UpdatesTicker />
-      <div className="mx-auto flex w-full max-w-[1680px] flex-1 gap-5 px-3 py-5 sm:px-4 lg:px-6 xl:px-10">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-1 gap-5 px-3 py-5 sm:px-4 lg:px-6 xl:px-10">
         <Suspense fallback={null}>
           <Sidebar />
         </Suspense>
