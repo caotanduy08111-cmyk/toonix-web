@@ -12,5 +12,5 @@ export const genres: Genre[] = [
   { slug: "the-thao", name: "Thể thao" },
   { slug: "khoa-hoc-vien-tuong", name: "Khoa học viễn tưởng" },
   { slug: "lich-su", name: "Lịch sử" },
-  { slug: "khac", name: "Khác" },
+  { slug: "khac", name: "Khác", bannerUrl: "/banners/genre-khac.png" },
 ];

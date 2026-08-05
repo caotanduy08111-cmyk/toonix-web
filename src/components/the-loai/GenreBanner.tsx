@@ -3,29 +3,34 @@
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { hashStringToHue } from "@/lib/hash";
-import type { Story } from "@/lib/types";
+
+export interface GenreBannerSlide {
+  id: string;
+  bannerUrl: string;
+  href?: string;
+}
 
 export function GenreBanner({
   genreSlug,
-  banners,
+  slides,
 }: {
   genreSlug: string;
-  banners: Story[];
+  slides: GenreBannerSlide[];
 }) {
   const [index, setIndex] = useState(0);
-  const hasBanners = banners.length > 0;
+  const hasSlides = slides.length > 0;
 
   useEffect(() => {
-    if (banners.length < 2) return;
+    if (slides.length < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => {
-      setIndex((i) => (i + 1) % banners.length);
+      setIndex((i) => (i + 1) % slides.length);
     }, 6000);
     return () => clearInterval(id);
-  }, [banners.length]);
+  }, [slides.length]);
 
   const hue = hashStringToHue(genreSlug);
-  const active = hasBanners ? banners[index] : undefined;
+  const active = hasSlides ? slides[index] : undefined;
 
   return (
     <section className="relative min-h-[280px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:min-h-[380px]">
@@ -57,9 +62,9 @@ export function GenreBanner({
         />
       )}
 
-      {active && (
+      {active?.href && (
         <ButtonLink
-          href={`/truyen/${active.slug}`}
+          href={active.href}
           variant="primary"
           className="absolute bottom-4 right-4 px-5 py-2.5 text-sm"
         >
@@ -67,11 +72,11 @@ export function GenreBanner({
         </ButtonLink>
       )}
 
-      {banners.length > 1 && (
+      {slides.length > 1 && (
         <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
-          {banners.map((story, i) => (
+          {slides.map((slide, i) => (
             <button
-              key={story.id}
+              key={slide.id}
               type="button"
               aria-label={`Chuyển đến banner ${i + 1}`}
               onClick={() => setIndex(i)}

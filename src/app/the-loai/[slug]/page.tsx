@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { StoryCard } from "@/components/story/StoryCard";
-import { GenreBanner } from "@/components/the-loai/GenreBanner";
+import { GenreBanner, type GenreBannerSlide } from "@/components/the-loai/GenreBanner";
 import {
   getAllGenres,
   getGenreBannerStories,
@@ -36,11 +36,21 @@ export default async function GenreDetailPage({
 
   const stories = getStoriesByGenre(slug);
   const bannerStories = getGenreBannerStories(slug);
+  const slides: GenreBannerSlide[] = [
+    ...bannerStories.map((story) => ({
+      id: story.id,
+      bannerUrl: story.bannerUrl!,
+      href: `/truyen/${story.slug}`,
+    })),
+    ...(genre.bannerUrl
+      ? [{ id: `genre-${genre.slug}`, bannerUrl: genre.bannerUrl }]
+      : []),
+  ];
 
   return (
     <AppShell>
       <div className="flex flex-col gap-5">
-        <GenreBanner genreSlug={slug} banners={bannerStories} />
+        <GenreBanner genreSlug={slug} slides={slides} />
         <div>
           <h1 className="font-display text-2xl font-bold tracking-wide text-ink-50">
             {genre.name}

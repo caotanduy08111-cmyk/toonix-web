@@ -29,6 +29,7 @@ export interface Chapter {
 export interface Genre {
   slug: string;
   name: string;
+  bannerUrl?: string;
 }
 
 export interface ContinueReadingEntry {
