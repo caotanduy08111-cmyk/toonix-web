@@ -53,7 +53,7 @@ export function HeroCarousel() {
   const slide = SLIDES[index];
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-navy-700 bg-navy-900">
+    <section className="relative h-[280px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:h-[380px]">
       <div
         key={`${slide.id}-bg`}
         className="animate-fade-in absolute inset-0"
@@ -75,23 +75,23 @@ export function HeroCarousel() {
       </div>
       <div
         key={slide.id}
-        className="animate-fade-up relative flex min-h-[280px] flex-col justify-center gap-4 px-6 py-10 sm:min-h-[380px] sm:px-10"
+        className="animate-fade-up relative flex h-full flex-col justify-center gap-3 px-6 py-6 sm:gap-4 sm:px-10 sm:py-8"
       >
         <span
           className={`w-fit rounded px-2 py-1 text-xs font-bold tracking-wide ${slide.eyebrowClass}`}
         >
           {slide.eyebrow}
         </span>
-        <h1 className="max-w-xl text-balance font-display text-3xl font-bold leading-[1.05] tracking-wide text-ink-50 sm:text-5xl">
+        <h1 className="max-w-xl text-balance font-display text-2xl font-bold leading-[1.1] tracking-wide text-ink-50 sm:text-4xl">
           {slide.title}
         </h1>
-        <p className="max-w-md text-sm text-ink-300 sm:text-base">
+        <p className="max-w-md text-xs text-ink-300 sm:text-sm">
           {slide.subtitle}
         </p>
         <ButtonLink
           href={slide.ctaHref}
           variant="primary"
-          className="mt-2 w-fit px-6 py-3 text-base"
+          className="mt-1 w-fit px-5 py-2.5 text-sm"
         >
           {slide.ctaLabel} →
         </ButtonLink>

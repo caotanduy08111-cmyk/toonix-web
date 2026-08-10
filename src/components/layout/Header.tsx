@@ -126,7 +126,7 @@ export function Header() {
 
         <Logo className="h-8" />
 
-        <nav className="hidden items-center gap-1 text-sm font-medium text-ink-300 md:flex">
+        <nav className="ml-4 hidden items-center gap-1 text-sm font-medium text-ink-300 md:flex lg:ml-10 xl:ml-16">
           {NAV_LINKS.map((link) => {
             const active = isNavLinkActive(pathname, link.href);
             return (
