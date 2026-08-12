@@ -53,7 +53,7 @@ export function HeroCarousel() {
   const slide = SLIDES[index];
 
   return (
-    <section className="relative h-[280px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:h-[380px]">
+    <section className="relative aspect-[2/1] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:aspect-auto sm:h-[380px]">
       <div
         key={`${slide.id}-bg`}
         className="animate-fade-in absolute inset-0"

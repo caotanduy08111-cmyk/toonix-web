@@ -33,7 +33,7 @@ export function GenreBanner({
   const active = hasSlides ? slides[index] : undefined;
 
   return (
-    <section className="relative min-h-[280px] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:min-h-[380px]">
+    <section className="relative aspect-[2/1] overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 sm:aspect-auto sm:min-h-[380px]">
       {active?.bannerUrl ? (
         <div key={active.id} className="animate-fade-in absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
