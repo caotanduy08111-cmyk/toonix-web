@@ -1,5 +1,6 @@
-import { ButtonLink } from "@/components/ui/Button";
+import Link from "next/link";
 import { CheckBadgeIcon } from "@/components/icons";
+import WaterButton from "@/components/ui/WaterButton";
 
 const PERKS = [
   "Đọc không giới hạn",
@@ -22,9 +23,23 @@ export function PremiumUpsellCard() {
           </li>
         ))}
       </ul>
-      <ButtonLink href="#" variant="primary" className="mt-4 w-full">
-        Dùng thử 7 ngày
-      </ButtonLink>
+      <Link href="#" className="mt-4 block">
+        <WaterButton
+          label="DÙNG THỬ 7 NGÀY"
+          textColor="#ffffff"
+          paddingX={20}
+          paddingY={12}
+          rounded={999}
+          waterColor="#22c8ea"
+          waterAmount={72}
+          border
+          borderOptions={{ color: "rgba(34, 200, 234, 0.55)", stroke: 1 }}
+          shadow
+          shadowOptions={{ color: "#12a9c9", intensity: 45 }}
+          font={{ fontSize: 14, fontWeight: 700, letterSpacing: "0.02em" }}
+          style={{ width: "100%" }}
+        />
+      </Link>
     </section>
   );
 }
