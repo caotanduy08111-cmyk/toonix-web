@@ -6,6 +6,7 @@ import { StarRating } from "@/components/ui/StarRating";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { HeartIcon } from "@/components/icons";
 import { useFavorites } from "@/hooks/useFavorites";
+import { burstEmojis } from "@/lib/emojiBurst";
 import { getGenreLabel } from "@/lib/stories";
 import type { Chapter, Story } from "@/lib/types";
 
@@ -65,7 +66,11 @@ export function StoryHeader({
           )}
           <Button
             variant={favorite ? "primary" : "secondary"}
-            onClick={() => toggleFavorite(story.slug)}
+            onClick={(e) => {
+              const next = !favorite;
+              toggleFavorite(story.slug);
+              if (next) burstEmojis(e.currentTarget);
+            }}
           >
             <HeartIcon filled={favorite} />
             {favorite ? "Đã yêu thích" : "Yêu thích"}

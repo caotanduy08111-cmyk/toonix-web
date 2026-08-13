@@ -6,6 +6,7 @@ import { StarRating } from "@/components/ui/StarRating";
 import { CoverArt } from "@/components/story/CoverArt";
 import { HeartIcon } from "@/components/icons";
 import { useFavorites } from "@/hooks/useFavorites";
+import { burstEmojis } from "@/lib/emojiBurst";
 import { getGenreLabel } from "@/lib/stories";
 import type { Story } from "@/lib/types";
 
@@ -44,7 +45,9 @@ export function StoryCard({
           aria-label={favorite ? "Bỏ yêu thích" : "Thêm vào yêu thích"}
           onClick={(e) => {
             e.preventDefault();
+            const next = !favorite;
             toggleFavorite(story.slug);
+            if (next) burstEmojis(e.currentTarget);
           }}
           className="absolute right-1.5 top-1.5 rounded-full bg-navy-950/70 p-1.5 text-ink-50 backdrop-blur hover:text-cyan-400"
         >
